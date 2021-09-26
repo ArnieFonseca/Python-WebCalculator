@@ -1,0 +1,32 @@
+#result {
+    font-style: italic;
+}
+#csrf {
+    display:none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+img {
+    position: relative;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+button,input,select:hover  {
+    cursor:pointer;
+}
+
+input:hover {
+    font-weight: 600;
+    color:blue;
+    background-color: rgba(226, 235, 174, 0.6);
+}
+.literals {
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+}
