@@ -6,7 +6,7 @@
     {% block content %}
         <h3> {{message}} </h3>
 
-        <p id="result">Press button to calculate the addition</p>
+        <p id="result">Press button to calculate the operation</p>
 
         <table>
             <tr>
@@ -28,14 +28,18 @@
 
         <!-- Request operation via AJAX call -->
         <button id="btn">Calculate</button>
-        <img id="imgLoader" src="static/image/circles-menu-1.gif">
-        <label id="csrfToken" style="display:none;">{{ csrf_token }}</label>
+        {% load static  %}
+        <img id="imgLoader" src="{% static 'image/circles-menu-1.gif' %}">
+                     
+        <span id="csrfToken" class="securityToken">{{ csrf_token }}</span>
+        
         
         {% endblock %}
 
     {% block scripts %} 
-       <script src="/static/js/index-constants.js"></script>
-       <script src="/static/js/index.js"></script>
+       {% load static  %}
+       <script src="{% static 'js/index-constants.js' %}"></script>
+       <script src="{% static 'js/index.js' %}"></script>
     {% endblock %}
     
  

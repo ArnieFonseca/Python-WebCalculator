@@ -1,8 +1,8 @@
 #result {
     font-style: italic;
 }
-#csrf {
-    display:none;
+.securityToken {
+    display: none;
 }
 
 body {

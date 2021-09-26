@@ -133,8 +133,8 @@
      */
     toggleVisibility();
 
+    
  
-
     /**
      * Attach Event Handlers
      */
