@@ -1,13 +1,13 @@
-#result {
+/* #result {
     font-style: italic;
-}
+} */
 .securityToken {
     display: none;
 }
-
+/* 
 body {
     background-color: whitesmoke;
-}
+} */
 
 img {
     position: relative;
@@ -18,15 +18,4 @@ img {
 
 button,input,select:hover  {
     cursor:pointer;
-}
-
-input:hover {
-    font-weight: 600;
-    color:blue;
-    background-color: rgba(226, 235, 174, 0.6);
-}
-.literals {
-    font-style: italic;
-    font-weight: bold;
-    text-align: right;
 }

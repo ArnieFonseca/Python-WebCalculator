@@ -4,33 +4,29 @@
 {% block title %} {{title}} {% endblock %} 
 
     {% block content %}
-        <h3> {{message}} </h3>
+        <h6> {{message}} </h6>
 
-        <p id="result">Press button to calculate the operation</p>
+        <p id="result" class="mt-4">Press button to calculate the operation</p>
 
-        <table>
-            <tr>
-                <td class="literals"><label> First:</label></td>
-                <td><input id="first" type="text" maxlength="5" placeholder="Enter a number" /></td>
-            </tr>
-            <tr>
-                <td class="literals"><label>Second:</label></td>
-                <td><input id="second" type="text" maxlength="5" placeholder="Enter a number" /></td>
-            </tr>
-        </table>
+    
+      <label class="form-label fst-italic">First: </label> 
+      <input id="first" type="text" class="form-control form-control-sm w-25" maxlength="5" placeholder="Enter a number" /> 
+      <label class="form-label fst-italic">Second: </label>
+      <input id="second" type="text" class="form-control form-control-sm  w-25" maxlength="5" placeholder="Enter a number" /> 
+    
         
         <!-- Dropdown fill out from the Model-->
-        <select id="cboOperation">
+        <select id="cboOperation" class="form-select form-select-sm w-25  mt-4 float-start">
             {% for op in operations %}
             <option value="{{op.oper}}">{{op.description}}</option>
             {% endfor %}
         </select>
 
         <!-- Request operation via AJAX call -->
-        <button id="btn">Calculate</button>
+        <button id="btn" class="btn btn-primary btn-sm mt-4 mx-1">Calculate</button>
         {% load static  %}
         <img id="imgLoader" src="{% static 'image/circles-menu-1.gif' %}">
-                     
+                 
         <span id="csrfToken" class="securityToken">{{ csrf_token }}</span>
         
         
